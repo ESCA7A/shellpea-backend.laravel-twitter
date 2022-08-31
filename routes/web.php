@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome', ['name' => 'Pavel']);
 });
 
-Route::get('my_page', 'App\Http\Controllers\MyPageController@getWelcome');
+Route::get('homepage', 'App\Http\Controllers\TweetController@getWelcome');

@@ -14,9 +14,10 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tweets', function (Blueprint $table) {
-            $table->id();
-            $table->string('header');
+            $table->id()->autoIncrement();
+            $table->string('header')->unique();
             $table->text('content');
+            $table->string('email')->unique();
             $table->unsignedBigInteger('likes');
             $table->timestamps();
         });
