@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('tweets', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('header')->unique();
+            $table->string('header')->nullable();
             $table->text('content');
-            $table->string('email')->unique();
-            $table->unsignedBigInteger('likes');
+            $table->string('email')->default('test@test.dev');
+            $table->unsignedBigInteger('likes')->nullable();
             $table->timestamps();
         });
     }
