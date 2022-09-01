@@ -18,7 +18,8 @@ class TweetFactory extends Factory
     {
         return [
             'header' => 'test header oh-oh-oh',
-            'content' => 'test content'
+            'content' => 'test content',
+            'likes' => rand(1000, 2000)
         ];
     }
 }
