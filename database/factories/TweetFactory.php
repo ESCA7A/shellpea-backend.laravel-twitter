@@ -16,8 +16,9 @@ class TweetFactory extends Factory
      */
     public function definition()
     {
+        static $number = 1;
         return [
-            'header' => 'test header oh-oh-oh',
+            'header' => 'test header, '. $number++ .': oh-oh-oh',
             'content' => 'test content',
             'likes' => rand(1000, 2000)
         ];
