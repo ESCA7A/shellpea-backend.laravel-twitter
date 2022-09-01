@@ -10,4 +10,5 @@ class Tweet extends Model
     use HasFactory;
 
     protected $table = 'tweets';
+    protected $guarded = [];
 }
