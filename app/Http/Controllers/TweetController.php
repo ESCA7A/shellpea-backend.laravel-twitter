@@ -38,4 +38,16 @@ class TweetController extends Controller
             Tweet::create($tweet);
         }
     }
+
+    public function update()
+    {
+        $tweet = Tweet::find(6);
+        $tweet->update([
+            'header' => 'updated header',
+            'content' => 'updated content',
+            'email' => 'updated@email.up',
+            'likes' => 0
+        ]);
+        dd('updated');
+    }
 }
