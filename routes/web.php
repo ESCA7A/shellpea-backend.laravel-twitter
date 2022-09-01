@@ -22,3 +22,5 @@ use App\Http\Controllers\TweetController;
 Route::get('homepage', [TweetController::class, 'getWelcome']);
 Route::get('homepage/create', [TweetController::class, 'create']);
 Route::get('homepage/update', [TweetController::class, 'update']);
+Route::get('homepage/delete', [TweetController::class, 'delete']);
+Route::get('homepage/restore', [TweetController::class, 'restore']);

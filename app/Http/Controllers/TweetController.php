@@ -50,4 +50,17 @@ class TweetController extends Controller
         ]);
         dd('updated');
     }
+
+    public function delete()
+    {
+        $tweet = Tweet::find(16);
+        $tweet->delete();
+        dd('hardcore delete');
+    }
+    public function restore()
+    {
+        $tweet = Tweet::withTrashed()->find(16);
+        $tweet->restore();
+        dd('restored!');
+    }
 }

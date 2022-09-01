@@ -20,6 +20,11 @@ return new class extends Migration
             $table->string('email')->default('test@test.dev');
             $table->unsignedBigInteger('likes')->nullable();
             $table->timestamps();
+
+            /**
+             * soft delete trait
+             */
+            $table->softDeletes();
         });
     }
 
