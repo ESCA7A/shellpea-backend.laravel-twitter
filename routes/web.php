@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome', ['name' => 'Pavel']);
-});
+})->name('welcome.view');
 
 use App\Http\Controllers\TweetController;
 
-Route::get('homepage', [TweetController::class, 'getWelcome']);
+Route::get('homepage', [TweetController::class, 'homepage'])->name('view.homepage');
 Route::get('homepage/create', [TweetController::class, 'create']);
 Route::get('homepage/update', [TweetController::class, 'update']);
 Route::get('homepage/delete', [TweetController::class, 'delete']);

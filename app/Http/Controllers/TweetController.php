@@ -6,13 +6,10 @@ use App\Models\Tweet;
 
 class TweetController extends Controller
 {
-    public function getWelcome()
+    public function homepage()
     {
-        $tweets = Tweet::all()->where('id', '>', 9);
-        foreach ($tweets as $tweet)
-        {
-            echo 'header : '. ($tweet->header). ", likes :". $tweet->likes. "<br>";
-        }
+        $tweets = Tweet::all();
+        return view('homepage', compact('tweets'));
     }
 
     public function create()
@@ -57,6 +54,7 @@ class TweetController extends Controller
         $tweet->delete();
         dd('hardcore delete');
     }
+
     public function restore()
     {
         $tweet = Tweet::withTrashed()->find(16);
