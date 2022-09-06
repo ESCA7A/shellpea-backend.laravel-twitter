@@ -18,9 +18,11 @@ class TweetFactory extends Factory
     {
         static $number = 1;
         return [
-            'header' => 'test header, '. $number++ .': oh-oh-oh',
-            'content' => 'test content',
-            'likes' => rand(1000, 2000)
+            'header' => 'test header '. $number++ .' : oh-oh-oh ',
+            'content' => 'test content, likes: ',
+            'likes' => rand(1000, 2000),
+            'user_id' => rand(1, 10),
+            'created_at' => time()
         ];
     }
 }

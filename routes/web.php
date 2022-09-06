@@ -19,8 +19,4 @@ Route::get('/', function () {
 
 use App\Http\Controllers\TweetController;
 
-Route::get('homepage', [TweetController::class, 'homepage'])->name('view.homepage');
-Route::get('homepage/create', [TweetController::class, 'create']);
-Route::get('homepage/update', [TweetController::class, 'update']);
-Route::get('homepage/delete', [TweetController::class, 'delete']);
-Route::get('homepage/restore', [TweetController::class, 'restore']);
+Route::get('homepage', [TweetController::class, 'tweets'])->name('homepage.tweets');

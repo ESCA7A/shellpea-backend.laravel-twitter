@@ -22,6 +22,14 @@ return new class extends Migration
             $table->timestamps();
 
             /**
+             * foreign key
+             * index
+             */
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->index('user_id', 'tweets_users_idx');
+            $table->foreign('user_id', 'tweets_users_fk')->on('users')->references('id');
+
+            /**
              * soft delete trait
              */
             $table->softDeletes();

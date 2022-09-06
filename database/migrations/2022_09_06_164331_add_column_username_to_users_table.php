@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('tweets', function (Blueprint $table) {
-            $table->dropColumn('description');
+        Schema::table('users', function (Blueprint $table) {
+                $table->string('username', 32)->unique()->after('email')->nullable();
         });
     }
 
@@ -25,8 +25,8 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::table('tweets', function (Blueprint $table) {
-            $table->text('description')->nullable()->after('content');
+        Schema::table('users', function (Blueprint $table) {
+            $table->dropColumn('username');
         });
     }
 };
