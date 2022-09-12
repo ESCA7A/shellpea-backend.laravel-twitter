@@ -14,9 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome', ['name' => 'Pavel']);
-})->name('welcome.view');
+    return view('welcome');
+})->name('welcome');
 
-use App\Http\Controllers\TweetController;
+Route::get('/homepage', [\App\Http\Controllers\TweetController::class, 'index'])->name('homepage');
 
-Route::get('homepage', [TweetController::class, 'tweets'])->name('homepage.tweets');
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
