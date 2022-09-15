@@ -20,7 +20,8 @@
                     </div>
                     <div>
                     <span class="text3">
-                        <a href="{{$tweet->users->customer_link}}">{{'@'. $tweet->users->username}}</a>
+{{--                        <a href="{{$tweet->users->customer_link}}">{{'@'. $tweet->users->username}}</a>--}}
+                        <a href="{{ route('/user/'. $tweet->user_id) }}">{{'@'. $tweet->users->username}}</a>
                         </span><span class="thumbup"><i class="fa fa-thumbs-o-up">{{$tweet->likes}}</i></span>
                         <span class="text4">txt4</span>
                     </div>

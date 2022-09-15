@@ -23,13 +23,22 @@ Route::get('/', function () {
 /**
  * homepage
  */
-Route::get('/homepage', [\App\Http\Controllers\TweetController::class, 'index'])->name('homepage');
+Route::get('/homepage', )->name('homepage');
 
 /**
  * customer's page
  */
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+Route::get('/dashboard', [\App\Http\Controllers\TweetController::class, 'index']
+)->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+use App\Http\Controllers\UserController;
+
+//Route::resource([
+//    '/user' => UserController::class,
+//   '/user/{user}' =>  UserController::class,
+//])->only(['index', 'show']);
+
+Route::get('/user/{id}', [UserController::class, 'show']);
+Route::get('/user', [UserController::class, 'index']);

@@ -3,6 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
+use App\Models\User;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Tweet>
@@ -20,8 +21,9 @@ class TweetFactory extends Factory
         return [
             'header' => 'загаловок твита '. $number++,
             'content' => 'какой-то контент ',
+            'email' => User::find($number)->email,
             'likes' => rand(1000, 2000),
-            'user_id' => rand(1, 10),
+            'user_id' => $number,
             'created_at' => time()
         ];
     }
