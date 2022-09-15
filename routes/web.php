@@ -13,12 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/**
+ * laravel welcome route
+ */
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+/**
+ * homepage
+ */
 Route::get('/homepage', [\App\Http\Controllers\TweetController::class, 'index'])->name('homepage');
 
+/**
+ * customer's page
+ */
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');

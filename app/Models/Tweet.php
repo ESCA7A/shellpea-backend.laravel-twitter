@@ -17,7 +17,7 @@ class Tweet extends Model
      use SoftDeletes;
 
       protected $table = 'tweets';
-    protected $guarded = [];
+      protected $guarded = [];
 
     public function users()
     {
