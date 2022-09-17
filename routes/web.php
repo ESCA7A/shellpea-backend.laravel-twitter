@@ -40,5 +40,5 @@ use App\Http\Controllers\UserController;
 //   '/user/{user}' =>  UserController::class,
 //])->only(['index', 'show']);
 
-Route::get('/user/{id}', [UserController::class, 'show']);
+Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
 Route::get('/user', [UserController::class, 'index']);
