@@ -1,71 +1,307 @@
-marg-100 {
-    margin-top: 100%;
-    margin-bottom: 160%;
-}
-
-.second{
-    height: 30%;
-    width: 30%;
-    background-color: white;
-    border-radius: 14px;
-    box-shadow: 5px 5px 5px #aaaaaa;
-}
-
-.text1{
-    font-size: 13px;
-    font-weight: 500;
-    color: #56575b;
-}
-
-.text2{
-    font-size: 13px;
-    font-weight: 500;
-    margin-left: 6px;
-    color: #56575b;
-}
-
-.text3{
-    font-size: 13px;
-    font-weight: 500;
-    margin-right: 4px;
-    color: #828386;
-}
-
-.text3o{
-    color: #000000;
+body {
+background: #e6ecf0;
+font-family: 'Asap', sans-serif;
+font-family: 'Roboto', sans-serif;
 
 }
-
-.text4{
-    font-size: 13px;
-    font-weight: 500;
-    color: #828386;
+img {
+max-width:100%;
+}
+.avator {
+border-radius:100px;
+width:48px;
+margin-right: 15px;
 }
 
-.text4i{
-    color: #00a5f4;
+.likes-count {
+font-size: 10px;
+opacity: 0.6;
 }
 
-.text4o{
-    color: white;
+.retweet-count {
+font-size: 10px;
+opacity: 0.6;
+}
+.comment-count {
+font-size: 10px;
+opacity: 0.6;
 }
 
-.thumbup{
-    font-size: 13px;
-    font-weight: 500;
-    margin-right: 5px;
+.repost {
+font-size: 10px;
+opacity: 0.6;
 }
 
-.thumbupo{
-    padding: 5% 5%;
-    color: #17a2b8;
+.tweet-wrap {
+padding-top: 100px;
+padding-bottom: 50px;
+max-width:490px;
+background: #fff;
+margin: 50px auto 0;
+border-radius:3px;
+border-bottom: 1px solid #e6ecf0;
+/*border-top: 1px solid #e6ecf0;*/
 }
 
-time{
-    font-size: 10px;
+.tweet-header {
+display: flex;
+align-items:flex-start;
+font-size:14px;
+}
+.tweet-header-info {
+font-weight:bold;
+}
+.tweet-header-info span {
+color:#657786;
+font-weight:normal;
+margin-left: 5px;
+}
+.tweet-header-info p {
+font-weight:normal;
+margin-top: 5px;
+
+}
+.tweet-img-wrap {
+padding-left: 60px;
 }
 
-p.tm-s {
-    font-size: 10px;
-    opacity: 0.5;
+.tweet-info-counts {
+display: flex;
+margin-left: 60px;
+margin-top: 10px;
 }
+.tweet-info-counts div {
+display: flex;
+margin-right: 20px;
+}
+.tweet-info-counts div svg {
+color:#657786;
+margin-right: 10px;
+}
+@media screen and (max-width:430px){
+body {
+padding-left: 20px;
+padding-right: 20px;
+}
+.tweet-header {
+flex-direction:column;
+}
+.tweet-header img {
+margin-bottom: 20px;
+}
+.tweet-header-info p {
+margin-bottom: 30px;
+}
+.tweet-img-wrap {
+padding-left: 0;
+}
+.tweet-info-counts {
+display: flex;
+margin-left: 0;
+}
+.tweet-info-counts div {
+margin-right: 10px;
+}
+}
+
+/**
+LIKES
+*/
+body, html
+height: 100vh
+background: #e9eaed
+user-select: none
+
+body
+display: flex
+align-items: center
+justify-content: center
+
+.options
+background: white
+width: 70px
+box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 2px 2px rgba(0, 0, 0, .15)
+border-radius: 20px
+padding: 10px 13px
+font:
+size: 0
+family: Helvetica
+weight: bold
+color: #7f7f7f
+position: relative
+cursor: pointer
+text-align: center
+
+.button
+font-size: 12px
+vertical-align: middle
+
+&::before
+content: ''
+display: inline-block
+vertical-align: middle
+height: 16px
+width: 16px
+margin-right: 4px
+background:
+image: url(https://static.xx.fbcdn.net/rsrc.php/v3/y3/r/GLfzuZS5ZZ5.png)
+size: auto
+position: 0 -892px
+
+.reactions
+opacity: 1
+transition: .1s .5s
+
+.reactions
+.icon-container
+&:hover
+transform: scale(1.3, 1.3) translateY(-5px)
+
+&:hover
+.reactions
+opacity: 1
+
+&.default
+color: #7f7f7f !important
+
+&::before
+background:
+position: 0 -893px
+
+&.Like
+color: rgb(88, 144, 255)
+
+&::before
+background:
+position: 0 -922px
+
+&.Love
+&::before
+background:
+position: 0 -710px
+
+&.Thankful
+&::before
+background:
+position: 0 -642px
+
+&.Haha
+&::before
+background:
+position: 0 -676px
+
+&.Wow
+&::before
+background:
+position: 0 -795px
+
+&.Sad
+&::before
+background:
+position: 0 -744px
+
+&.Angry
+&::before
+background:
+position: 0 -608px
+
+.reactions
+position: absolute
+bottom: 130%
+left: 50%
+transform: translateX(-50%)
+border-radius: 50px
+background: white
+box-shadow: 0 0 0 1px rgba(0, 0, 0, .08), 0 2px 2px rgba(0, 0, 0, .15)
+line-height: 0
+white-space: nowrap
+opacity: 0
+padding: 3px
+pointer-events: none
+transition: .2s .5s
+
+.icon-container
+display: inline-block
+transition: transform .2s ease
+
+.reaction
+display: inline-block
+height: 48px
+width: 48px
+transform: perspective(1px) scale(.8, .8) translate(0, 0)
+transition: transform 0s .7s ease, opacity 0s .7s ease
+line-height: initial
+opacity: 0
+border-radius: 100%
+background:
+image: url(https://assets.medinnna.com/facebook-reactions.gif)
+repeat: no-repeat
+size: auto
+
+&.is-visible
+transition: opacity .3s ease
+opacity: 1
+pointer-events: all
+animation: testes .6s ease forwards
+
+@keyframes testes
+0%
+transform: perspective(1px) scale(.8, .8) translate(0, 70px)
+30%
+transform: perspective(1px) scale(.87, .87) translate(0, -4px)
+70%
+transform: perspective(1px) scale(.8, .8) translate(0, 1px)
+100%
+transform: perspective(1px) scale(.8, .8) translate(0, 0)
+
+&:hover
+transform: perspective(1px) scale(1, 1) translate(0, -5px)
+
+&::after
+opacity: 1
+
+&::after
+content: attr(data-popup)
+position: absolute
+background: rgba(0, 0, 0, .7)
+border-radius: 15px
+color: white
+font:
+family: helvetica
+weight: bold
+size: 13px
+padding: 2px 7px
+top: -25px
+left: 50%
+transform: translateX(-50%)
+white-space: nowrap
+opacity: 0
+transition: opacity .07s ease
+
+&.like
+background:
+position: 0 0
+
+&.love
+background:
+position: -52px 0
+
+&.thankful
+background:
+position: -314px 0
+
+&.haha
+background:
+position: -104px 0
+
+&.wow
+background:
+position: -156px 0
+
+&.sad
+background:
+position: -208px 0
+
+&.angry
+background:
+position: -260px 0
