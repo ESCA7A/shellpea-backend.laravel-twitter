@@ -17,9 +17,6 @@ class DatabaseSeeder extends Seeder
         static $num = 0;
         \App\Models\User::factory(50)->create();
         \App\Models\Tweet::factory(11)->create();
-        \App\Models\User::factory()->create([
-             'name' => 'Test User',
-             'email' => 'test'. $num++ .'@example.com',
-         ]);
+        \App\Models\Commentary::factory(10)->create();
     }
 }

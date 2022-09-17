@@ -14,7 +14,7 @@ return new class extends Migration
     public function up()
     {
         Schema::create('tweets', function (Blueprint $table) {
-            $table->id()->autoIncrement();
+            $table->id();
             $table->string('header')->nullable();
             $table->text('content');
             $table->string('email')->default('test@test.dev');
