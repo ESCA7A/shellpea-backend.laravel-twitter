@@ -13,9 +13,22 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('comments', function (Blueprint $table) {
+        Schema::create('commentaries', function (Blueprint $table) {
             $table->id();
+            $table->text('content')->nullable();
+
+            /**
+             * foreign keys
+             */
+            $table->foreignId('post_id')->constrained('tweets');
+            $table->foreignId('author_id')->constrained('users');
+
             $table->timestamps();
+
+            /**
+             * soft delete trait
+             */
+            $table->softDeletes();
         });
     }
 
@@ -26,6 +39,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('comments');
+        Schema::dropIfExists('commentaries');
     }
 };
