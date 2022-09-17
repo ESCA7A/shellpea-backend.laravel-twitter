@@ -25,9 +25,8 @@ return new class extends Migration
              * foreign key
              * index
              */
-            $table->unsignedBigInteger('user_id')->nullable();
             $table->index('user_id', 'tweets_users_idx');
-            $table->foreign('user_id', 'tweets_users_fk')->on('users')->references('id');
+            $table->foreignId('user_id')->constrained('users');
 
             /**
              * soft delete trait
