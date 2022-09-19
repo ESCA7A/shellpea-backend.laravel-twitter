@@ -21,31 +21,29 @@ Route::get('/', function () {
 })->name('welcome');
 
 /**
- * homepage
+ * index page
  */
-Route::get('/homepage', )->name('homepage');
-
-/**
- * customer's page
- */
-Route::get('/dashboard', [\App\Http\Controllers\TweetController::class, 'index']
-)->middleware(['auth'])->name('dashboard');
-
 require __DIR__.'/auth.php';
 
-use App\Http\Controllers\UserController;
+Route::get('/dashboard', [\App\Http\Controllers\PostController::class, 'index']
+)->middleware(['auth'])->name('dashboard.index');
 
-//Route::resource([
-//    '/user' => UserController::class,
-//   '/user/{user}' =>  UserController::class,
-//])->only(['index', 'show']);
-
-Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
-Route::get('/user', [UserController::class, 'index']);
+Route::post('/dashboard', [\App\Http\Controllers\CommentController::class, 'create'])->name('dashboard.create');
 
 /**
- * admin dashboard
+ * customer page
  */
-Route::get('/admin', function() {
-    return view('admin');
-})->name('admin');
+Route::get('/user', [\App\Http\Controllers\UserController::class, 'index']);
+Route::get('/user/{id}', [\App\Http\Controllers\UserController::class, 'show'])->name('user.show');
+
+
+/**
+ * admin-panel dashboard
+ */
+Route::get('/admin', [\App\Http\Controllers\AdminDashboard\DashboardController::class, 'index'])
+    ->name('admin-panel');
+
+Route::get('/test', function () {
+    return view('test.test');
+});
+//Route::resource('')

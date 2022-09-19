@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Tweet;
+use App\Models\Post;
 
 class UserController extends Controller
 {
-    protected $customerTweets = [];
+    protected $customerPosts = [];
     /**
      * Display a listing of the resource.
      *
@@ -39,16 +39,16 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $customerTweets = $this->customerTweets;
+        $customerPosts = $this->customerPosts;
         $user = User::find($id);
-        $tweets = Tweet::all();
+        $posts = Post::all();
 
-        foreach ($tweets as $tweet) {
-            if ($tweet->user_id != $id) continue;
-            $customerTweets[] = $tweet;
+        foreach ($posts as $post) {
+            if ($post->author_id != $id) continue;
+            $customerPosts[] = $post;
         }
 
-        return view('customer', ['user' => $user, 'customerTweets' => $customerTweets]);
+        return view('customer', ['user' => $user, 'customerPosts' => $customerPosts]);
     }
 
     /**

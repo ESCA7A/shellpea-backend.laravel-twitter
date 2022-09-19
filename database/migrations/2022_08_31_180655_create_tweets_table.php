@@ -13,20 +13,23 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tweets', function (Blueprint $table) {
+        Schema::create('posts', function (Blueprint $table) {
             $table->id();
             $table->string('header')->nullable();
             $table->text('content');
             $table->string('email')->default('test@test.dev');
-            $table->unsignedBigInteger('likes')->nullable();
-            $table->timestamps();
+            $table->unsignedBigInteger('comment_count')->nullable();
+            $table->unsignedBigInteger('repost_count')->nullable();
+            $table->unsignedBigInteger('like_count')->nullable();
 
             /**
              * foreign key
              * index
              */
-            $table->index('user_id', 'tweets_users_idx');
-            $table->foreignId('user_id')->constrained('users');
+            $table->index('author_id');
+            $table->foreignId('author_id')->constrained('users');
+
+            $table->timestamps();
 
             /**
              * soft delete trait
@@ -42,6 +45,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tweets');
+        Schema::dropIfExists('posts');
     }
 };

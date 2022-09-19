@@ -1,13 +1,18 @@
+var script = document.createElement('script');
+script.src = 'https://code.jquery.com/jquery-3.4.1.min.js';
+script.type = 'text/javascript';
+document.getElementsByTagName('head')[0].appendChild(script);
+
 var animateReactionsOn;
 var animateReactionsOut;
 
-Jqery(function () {
+$(function () {
     $(".options").mouseenter(function () {
-        var parent = $(this)
+        var parent = $(this);
 
         animateReactionsOn = setTimeout(function () {
             parent.find(".reaction").each(function (index) {
-                var element = $(this)
+                var element = $(this);
                 setTimeout(function () {
                     element.addClass("is-visible");
                 }, index * 60);
@@ -18,7 +23,7 @@ Jqery(function () {
     });
 
     $(".options").mouseleave(function () {
-        var parent = $(this)
+        var parent = $(this);
 
         animateReactionsOut = setTimeout(function () {
             parent.removeClass("active");
@@ -28,16 +33,16 @@ Jqery(function () {
         clearTimeout(animateReactionsOn);
     });
 
-
     var dataPopupOld = null;
     var dataPopupNew = null;
 
-
     $(".options .button").click(function () {
-        var children = $(this)
-        var parent = $(this).parent()
+        var children = $(this);
+        var parent = $(this).parent();
 
-        if ($(this).parent().is(".Like, .Love, .Thankful, .Haha, .Wow, .Sad, .Angry")) {
+        if (
+            $(this).parent().is(".Like, .Love, .Thankful, .Haha, .Wow, .Sad, .Angry")
+        ) {
             parent.removeClass("Like Love Thankful Haha Wow Sad Angry");
             parent.addClass("default");
             parent.find(".button").text("Like");
@@ -50,7 +55,6 @@ Jqery(function () {
         }
     });
 
-
     $(".reaction").click(function () {
         dataPopupNew = $(this).attr("data-popup");
 
@@ -58,15 +62,17 @@ Jqery(function () {
 
         $(".options .button").text(dataPopupNew);
 
-        $('.options:contains(Like)').css('color', 'rgb(88, 144, 255)');
-        $('.options:contains(Love)').css('color', 'rgb(242, 82, 104)');
-        $('.options:contains(Thankful)').css('color', 'rgb(157, 135, 210)');
-        $('.options:contains(Haha), .options:contains(Wow), .options:contains(Sad)').css('color', 'rgb(240, 186, 21)');
-        $('.options:contains(Angry)').css('color', 'rgb(247, 113, 75)');
+        $(".options:contains(Like)").css("color", "rgb(88, 144, 255)");
+        $(".options:contains(Love)").css("color", "rgb(242, 82, 104)");
+        $(".options:contains(Thankful)").css("color", "rgb(157, 135, 210)");
+        $(
+            ".options:contains(Haha), .options:contains(Wow), .options:contains(Sad)"
+        ).css("color", "rgb(240, 186, 21)");
+        $(".options:contains(Angry)").css("color", "rgb(247, 113, 75)");
 
         $(".options").removeClass(dataPopupOld);
         $(".options").addClass(dataPopupNew);
 
-        dataPopupOld = dataPopupNew
+        dataPopupOld = dataPopupNew;
     });
 });
