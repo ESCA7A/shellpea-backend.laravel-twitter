@@ -1,0 +1,78 @@
+Gtk-Message: 20:05:51.891: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 20:05:52.040: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 20:05:52.308: Failed to load module "appmenu-gtk-module"
+Discord 0.0.20
+Gtk-Message: 20:05:52.494: Failed to load module "appmenu-gtk-module"
+Discord 0.0.20
+Starting app.
+Starting updater.
+[Modules] Modules initializing
+[Modules] Distribution: remote
+[Modules] Host updates: enabled
+[Modules] Module updates: enabled
+[Modules] Module install path: /home/esca7a/.config/discord/0.0.20/modules
+[Modules] Module installed file path: /home/esca7a/.config/discord/0.0.20/modules/installed.json
+[Modules] Module download path: /home/esca7a/.config/discord/0.0.20/modules/pending
+Quitting secondary instance.
+Gtk-Message: 20:05:52.681: Failed to load module "appmenu-gtk-module"
+Discord 0.0.20
+Quitting secondary instance.
+Gtk-Message: 20:05:52.807: Failed to load module "appmenu-gtk-module"
+[Modules] No updates to install
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+Optional module ./ElectronTestRpc was not included.
+qt.gui.imageio.jpeg: Corrupt JPEG data: premature end of data segment
+qt.gui.imageio.jpeg: Corrupt JPEG data: premature end of data segment
+qt.gui.imageio.jpeg: Corrupt JPEG data: premature end of data segment
+qt.gui.imageio.jpeg: Corrupt JPEG data: premature end of data segment
+qt.gui.imageio.jpeg: Corrupt JPEG data: premature end of data segment
+WEIGHT /home/esca7a/.config/discord/0.0.20/modules/discord_krisp/NC_small_8k.thw
+WEIGHT /home/esca7a/.config/discord/0.0.20/modules/discord_krisp/NC_small_16k.thw
+WEIGHT /home/esca7a/.config/discord/0.0.20/modules/discord_krisp/c6.s.f.27f1a3.thw
+WEIGHT /home/esca7a/.config/discord/0.0.20/modules/discord_krisp/VAD_weight.thw
+[Modules] Checking for host updates.
+[Modules] Host is up to date.
+[Modules] Checking for module updates at https://discord.com/api/modules/stable/versions.json
+[Modules] No module updates available.
+[Modules] Starting to install discord_rpc...
+[Modules] Fetching discord_rpc@1 from https://discord.com/api/modules/stable/discord_rpc/1
+[Modules] Streaming discord_rpc@1 to /home/esca7a/.config/discord/0.0.20/modules/pending/discord_rpc-1.zip
+[Modules] Streaming discord_rpc@1 to /home/esca7a/.config/discord/0.0.20/modules/pending/discord_rpc-1.zip: 100%
+[Modules] Finished module downloads. [success: 1] [failure: 0]
+[Modules] Installing discord_rpc@1 from /home/esca7a/.config/discord/0.0.20/modules/pending/discord_rpc-1.zip
+Gtk-Message: 20:05:58.514: Failed to load module "appmenu-gtk-module"
+[Modules] Finished module installations. [success: 1] [failure: 0]
+Discord 0.0.20
+Quitting secondary instance.
+Gtk-Message: 20:05:59.043: Failed to load module "appmenu-gtk-module"
+Gtk-Message: 20:06:08.587: Failed to load module "appmenu-gtk-module"
+Discord 0.0.20
+Quitting secondary instance.
+Gtk-Message: 20:06:09.058: Failed to load module "appmenu-gtk-module"
+[5950:0920/200658.125045:FATAL:gpu_data_manager_impl_private.cc(415)] GPU process isn't usable. Goodbye.
+--2022-09-20 20:06:58--  https://sentry.io/api/146342/minidump/?sentry_key=384ce4413de74fe0be270abe03b2b35a
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving sentry.io (sentry.io)... 35.188.42.15
+Connecting to sentry.io (sentry.io)|35.188.42.15|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 36 [text/plain]
+Saving to: ‘/dev/fd/4’
+
+     0K 
+ Failed to get crash dump id. 
+ Report Id:  86dd1b3f-a8a2-42 
+ --2022-09-20 20:06:59--  https://sentry.io/api/146342/minidump/?sentry_key=384ce4413de74fe0be270abe03b2b35a
+Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'
+Resolving sentry.io (sentry.io)... 35.188.42.15
+Connecting to sentry.io (sentry.io)|35.188.42.15|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 36 [text/plain]
+Saving to: ‘/dev/fd/4’
+
+     0K 
+ Failed to get crash dump id. 
+ Report Id:  f2ac1849-4f4d-43 
+ The X11 connection broke (error 1). Did the X11 server die?
