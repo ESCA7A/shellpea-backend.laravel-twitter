@@ -12,21 +12,19 @@ class Comment extends Model
     use SoftDeletes;
 
     protected $table = 'comments';
-
-    public function tweet()
-    {
-        return $this->belongsTo(Post::class, 'post_id');
-    }
+    protected $fillable = [
+        'post_id',
+        'author_id',
+        'content',
+    ];
 
     public function post()
     {
-        return $this->belongsTo(Post::class);
+        return $this->belongsTo(Post::class, 'post_id');
     }
 
     public function user()
     {
         return $this->belongsTo(User::class, 'author_id');
     }
-
-
 }
