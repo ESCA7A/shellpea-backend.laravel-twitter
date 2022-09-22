@@ -39,16 +39,11 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $customerPosts = $this->customerPosts;
         $user = User::find($id);
-        $posts = Post::all();
 
-        foreach ($posts as $post) {
-            if ($post->author_id != $id) continue;
-            $customerPosts[] = $post;
-        }
+        $posts = $user->posts;
 
-        return view('customer', ['user' => $user, 'customerPosts' => $customerPosts]);
+        return view('templates.customer.app', ['user' => $user, 'posts' => $posts]);
     }
 
     /**

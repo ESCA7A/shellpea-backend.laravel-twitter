@@ -22,7 +22,7 @@ return new class extends Migration
              */
             $table->foreignId('post_id')->constrained('posts');
             $table->foreignId('author_id')->constrained('users');
-
+            
             $table->timestamps();
 
             /**

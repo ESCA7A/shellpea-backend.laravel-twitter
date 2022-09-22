@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
-class PostController extends Controller
+class CommentController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::all()->sortByDesc("id");
-
-        return view('dashboard', ['posts' => $posts]);
+        //
     }
 
     /**
@@ -37,17 +35,13 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            "header" => "string|required",
-            "content" => "string|required",
+        $data = $request->validate([
+           'post_id' => '',
+           'author_id' => '',
+           'content' => '',
         ]);
 
-        Post::create([
-            'author_id' => $request->author_id,
-            'email' => $request->email,
-            'header' => $request->header,
-            'content' => $request->content,
-        ]);
+        Comment::create($data);
 
         return redirect('dashboard');
     }
@@ -60,10 +54,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $post = Post::find($id);
-        $user = $post->user;
-
-        return view('templates.customer.app', ['post' => $post, 'user' => $user]);
+        //
     }
 
     /**
