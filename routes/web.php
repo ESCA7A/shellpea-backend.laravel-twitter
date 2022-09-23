@@ -20,6 +20,7 @@ Route::prefix('/dashboard')->middleware(['auth'])->group(function () {
      */
     Route::resource('post', \App\Http\Controllers\PostController::class);
     Route::resource('comment', \App\Http\Controllers\CommentController::class);
+    Route::resource('chats', \App\Http\Controllers\ChatController::class);
 
     /**
      * customer page
