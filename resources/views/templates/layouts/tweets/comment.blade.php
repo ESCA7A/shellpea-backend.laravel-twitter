@@ -7,11 +7,7 @@
         <div class="flex-1 bg-gray-100 rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed" style="margin-bottom: 50px">
             <strong >{{ Auth::user()->username }}</strong><span class="text-xs text-gray-400"></span>
             <p class="text-xs sm:text-sm">
-
                 <textarea name="content" style="width: 100%" placeholder="оставьте комментарий">{{ old('content') }}</textarea>
-                @error('content')
-                    <p class="text-xs sm:text-sm">комментарий не должен быть пустым</p>
-                @enderror
             </p>
             <div class="text-right">
                 <button type="submit" class="border bg-gray-200 text-gray-700 rounded-md px-4 py-2 m-2">submit</button>

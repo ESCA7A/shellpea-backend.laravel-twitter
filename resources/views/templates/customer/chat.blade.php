@@ -1,6 +1,6 @@
 @extends('templates.layouts.base.app')
 @section('content')
-    @foreach($followers as $follower)
+    @foreach($chats as $chat)
         <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
             <strong>
                 left h1

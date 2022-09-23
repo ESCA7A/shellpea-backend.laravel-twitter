@@ -20,29 +20,11 @@
                     <li>
                         <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-400">Link</a>
                     </li>
-                    <li>
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-400">Link</a>
-                    </li>
-                    <li>
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-400">Link</a>
-                    </li>
-                    <li>
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-400">Link</a>
-                    </li>
                 </ul>
             </div>
             <div class="col-span-6 text-center md:text-left md:col-span-3">
                 <p class="pb-1 text-lg font-medium">Category</p>
                 <ul>
-                    <li>
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-400">Link</a>
-                    </li>
-                    <li>
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-400">Link</a>
-                    </li>
-                    <li>
-                        <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-400">Link</a>
-                    </li>
                     <li>
                         <a rel="noopener noreferrer" href="#" class="hover:dark:text-violet-400">Link</a>
                     </li>
