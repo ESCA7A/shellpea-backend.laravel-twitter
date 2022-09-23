@@ -13,8 +13,11 @@
                 <img class="mt-2 rounded-full w-8 h-8 sm:w-10 sm:h-10" src="https://images.unsplash.com/photo-1604426633861-11b2faead63c?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=200&h=200&q=80" alt="">
             </div>
             <div class="flex-1 border rounded-lg px-4 py-2 sm:px-6 sm:py-4 leading-relaxed">
-                <strong><a href="{{ route('user.show', $post->user->id) }}">{{ $post->user->username }}</a></strong>
-                <span class="text-xs text-gray-400">{{ $post->created_at }}</span>
+                <strong>
+                    <a href="{{ route('user.show', $post->user->id) }}">{{ $post->user->username }}</a>
+                </strong>
+                <strong style="padding-left: 10%;">{{ $post->header }}</strong>
+                <span class="text-xs text-gray-400" style="margin-left: 10%;">{{ $post->created_at }}</span>
                 <p class="text-sm" style="margin-bottom: 20px; margin-top: 10px; "><label>{{ $post->content }}</label></p>
 
                 @foreach($post->comments as $comment)

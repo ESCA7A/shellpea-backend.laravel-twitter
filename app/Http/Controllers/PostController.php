@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\PostTag;
+use App\Models\Tag;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Helpers\TagController;
 
 class PostController extends Controller
 {
@@ -26,7 +29,6 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -35,19 +37,25 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, TagController $tag)
     {
+
         $request->validate([
             "header" => "string|required",
             "content" => "string|required",
         ]);
 
-        Post::create([
+        $post = Post::firstOrCreate([
             'author_id' => $request->author_id,
             'email' => $request->email,
             'header' => $request->header,
             'content' => $request->content,
         ]);
+
+        /**
+         * parse & insert tags
+         */
+        $tag->parseTags($request, $post);
 
         return redirect('dashboard');
     }
@@ -74,7 +82,6 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -86,7 +93,6 @@ class PostController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
     }
 
     /**
@@ -97,6 +103,5 @@ class PostController extends Controller
      */
     public function destroy($id)
     {
-        //
     }
 }

@@ -14,7 +14,6 @@ class CommentController extends Controller
      */
     public function index()
     {
-        //
     }
 
     /**
@@ -24,7 +23,6 @@ class CommentController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -38,7 +36,7 @@ class CommentController extends Controller
         $data = $request->validate([
            'post_id' => '',
            'author_id' => '',
-           'content' => '',
+           'content' => 'required|string',
         ]);
 
         Comment::create($data);
@@ -54,7 +52,6 @@ class CommentController extends Controller
      */
     public function show($id)
     {
-        //
     }
 
     /**
@@ -65,7 +62,6 @@ class CommentController extends Controller
      */
     public function edit($id)
     {
-        //
     }
 
     /**
@@ -77,7 +73,6 @@ class CommentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
     }
 
     /**
@@ -88,6 +83,5 @@ class CommentController extends Controller
      */
     public function destroy($id)
     {
-        //
     }
 }

@@ -2,8 +2,8 @@
 
 @section('content')
     <form method="UPDATE" action="#">
-        @csrf
-        @method('UPDATE')
+    @csrf
+    @method('UPDATE')
         @include('templates.customer.about')
     </form>
         @foreach($posts as $post)
