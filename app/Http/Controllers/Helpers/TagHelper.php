@@ -8,7 +8,7 @@ use App\Models\PostTag;
 use App\Models\Tag;
 use Illuminate\Http\Request;
 
-class TagController extends Controller
+class TagHelper extends Controller
 {
     const HASHTAG_PATTERN = '/(#\w+)/';
     protected array $hashtagsMatches = [];

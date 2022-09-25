@@ -14,8 +14,7 @@ class ChatController extends Controller
      */
     public function index()
     {
-        $chats = Chat::all();
-        return view('templates.customer.chat', ['chats' => $chats]);
+        return view('templates.customer.chat', ['chats' => $chats = Chat::all()]);
     }
 
     /**

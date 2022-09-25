@@ -3,10 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use App\Models\PostTag;
-use App\Models\Tag;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Helpers\TagController;
+use App\Http\Controllers\Helpers\TagHelper;
 
 class PostController extends Controller
 {
@@ -37,12 +35,12 @@ class PostController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request, TagController $tag)
+    public function store(Request $request, TagHelper $tag)
     {
 
         $request->validate([
-            "header" => "string|required",
-            "content" => "string|required",
+            "header" => ['string', 'required'],
+            "content" => ['string', 'required'],
         ]);
 
         $post = Post::firstOrCreate([

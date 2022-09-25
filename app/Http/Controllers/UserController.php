@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Helpers\FollowHelper;
+
+use App\Models\FollowerUser;
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Post;
 
 class UserController extends Controller
 {
@@ -37,13 +39,14 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, FollowHelper $followHelper)
     {
-        $user = User::find($id);
-
-        $posts = $user->posts;
-
-        return view('templates.customer.app', ['user' => $user, 'posts' => $posts]);
+        return view('templates.customer.app', [
+            'user' => $user = User::find($id),
+            'posts' => $posts = $user->posts,
+            'followers' => $followers = FollowerUser::find($id),
+            'is_follow' => $followHelper->isFollow($user, $id),
+            ]);
     }
 
     /**
@@ -65,7 +68,7 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**

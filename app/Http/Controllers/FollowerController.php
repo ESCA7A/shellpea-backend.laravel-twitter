@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Helpers\FollowHelper;
 use App\Models\FollowerUser;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -9,16 +10,20 @@ use Illuminate\Support\Facades\Auth;
 
 class FollowerController extends Controller
 {
+    public const FOLLOW = 'follow';
+    public const UNFOLLOW = 'unfollow';
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(FollowHelper $followHelper, User $user)
     {
-        $user = User::find(Auth::user()->id);
-        $followers = $user->followers;
-        return view('templates.customer.followers', ['followers' => $followers]);
+        return view('templates.customer.followers', [
+            'followers' => $followers = Auth::user()->followers,
+            'user' => $user,
+        ]);
     }
 
     /**
@@ -28,7 +33,6 @@ class FollowerController extends Controller
      */
     public function create()
     {
-        //
     }
 
     /**
@@ -37,26 +41,17 @@ class FollowerController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, FollowHelper $followHelper, FollowerUser $followerUser, User $user)
     {
-        $result = $request->status;
-        if ($result === 'follow') {
-            FollowerUser::firstOrCreate([
-                'user_id' => $request->id,
-                'follower_id' => Auth::user()->id,
-            ]);
+        $user = User::find($request->user_id);
+        $isFollow = $followHelper->isFollow($user);
 
-            return view('templates.customer.followers');
-        }
+        dd($followerUser);
 
-        if ($result === 'unfollow') {
-            FollowerUser::firstOrCreate([
-                'user_id' => $request->id,
-                'follower_id' => Auth::user()->id,
-            ]);
-
-            return view('templates.customer.followers');
-        }
+        return redirect()->route('user.show', [
+            'user' => $user,
+            'isFollow' => $isFollow,
+        ]);
     }
 
     /**
@@ -67,7 +62,6 @@ class FollowerController extends Controller
      */
     public function show(FollowerUser $follower)
     {
-        //
     }
 
     /**
@@ -78,7 +72,13 @@ class FollowerController extends Controller
      */
     public function edit(FollowerUser $follower)
     {
-        //
+        if ($request->follow) {
+            return $followHelper->follow($user);
+        }
+
+        if ($request->unfollow) {
+            return $followHelper->unfollow($user);
+        }
     }
 
     /**
@@ -90,7 +90,7 @@ class FollowerController extends Controller
      */
     public function update(Request $request, FollowerUser $follower)
     {
-        //
+
     }
 
     /**
@@ -101,6 +101,6 @@ class FollowerController extends Controller
      */
     public function destroy(FollowerUser $follower)
     {
-        //
+        return redirect()->route('followers.index', [$follower->delete()]);
     }
 }
