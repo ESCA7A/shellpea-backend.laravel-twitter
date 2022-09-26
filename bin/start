@@ -3,7 +3,7 @@
 ENV=$(find $pwd.. -name .env)
 
 if ($ENV > '')
-  then echo 'CREATE .ENV FILE'
+  then echo 'NOT FOUND .ENV FILE'
 else
   npm run dev & php artisan serve
 fi
