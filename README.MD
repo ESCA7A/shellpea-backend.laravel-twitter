@@ -3,6 +3,7 @@
 ### description
 ...
 
+[@author](https://github.com/ESCA7A)
 ####  how to deploy
 
 1. clone the repository first
