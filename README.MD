@@ -5,9 +5,11 @@
 
 ####  how to deploy
 
-1. для начала склонируйте репозиторий
+1. clone the repository first
 > git clone git@github.com:ESCA7A/twitter-laravel.git example
-2. проверьте необходимые зависимости
+2. go to directory `cd example`
+3. check the required dependencies
+
 ```
     required dependencies:
     1. php ^7.4
@@ -15,10 +17,13 @@
     3. npm ^6
     4. nodejs
 ```
-3. добавьте подключение к базе данных в .env
+
+4. add database connection to .env
+
 ```
    DB_DATABASE=$database-name
    DB_USERNAME=$user
    DB_PASSWORD=0000
 ```
-4. запустите в терминале команду `bin/start`
+
+5. run `bin/start` in terminal
