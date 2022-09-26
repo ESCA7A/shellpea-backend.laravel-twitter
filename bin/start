@@ -1,11 +1,4 @@
 #!/bin/bash
 
-ENV=$(find $pwd.. -name .env)
-
-if ($ENV > '')
-  then echo 'NOT FOUND .ENV FILE'
-else
-  php artisan key:generate
-  php artisan migrate --seed
-  npm run dev & php artisan serve
-fi
+php artisan migrate --seed
+npm run dev & php artisan serve
