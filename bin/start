@@ -1,0 +1,9 @@
+#!/bin/bash
+
+ENV=$(find $pwd.. -name .env)
+
+if ($ENV > '')
+  then echo 'CREATE .ENV FILE'
+else
+  npm run dev & php artisan serve
+fi
