@@ -19,7 +19,9 @@
     4. nodejs
 ```
 
-4. add database connection to .env
+4. run `bin/install` in terminal
+
+5. go to .env and add database configuration 
 
 ```
    DB_DATABASE=$database-name
@@ -27,4 +29,5 @@
    DB_PASSWORD=0000
 ```
 
-5. run `bin/start` in terminal
+6. run `bin/start` in terminal
+7. open [localhost](http://localhost:8000) in browser
