@@ -1,0 +1,18 @@
+#!/bin/bash
+
+ENV=$(find $pwd -name .env)
+GREEN='\033[1;32m'
+RED='\033[1;31m'
+NC='\033[0m' # No Color
+
+composer install && npm install
+
+if [ "$ENV" != "./.env" ]
+  then
+    printf "${GREEN}creating ENV configuration...${NC}" && sleep 1 && echo ... && sleep 1 && echo ...;
+    cp ./.env.example ./.env
+    printf "${GREEN}Confiration successfuly ${NC}\n${RED}Please enter your data in .env files by yourself${NC}" && sleep 1;
+    php artisan key:generate
+else
+  printf "${RED}Please enter your data in .env files by yourself${NC}"
+fi
