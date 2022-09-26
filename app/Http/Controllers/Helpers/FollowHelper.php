@@ -17,9 +17,12 @@ class FollowHelper extends Controller
      */
     public function isFollow(User $user): bool
     {
-        $customer = Auth::user();
-        $userFollow = $customer->follows->where('user_id', $user->id)->all();
-        return (!empty($userFollow));
+        $authUser = Auth::user();
+        $relationOfUser = (FollowerUser::where('user_id', $user->id)->where('follower_id', $authUser->id)->get());
+        foreach ($authUser->follows as $follow) {
+             ($follow->user->id);
+        }
+        return (!empty($relationOfUser[0]->id));
     }
 
     /**
@@ -27,11 +30,13 @@ class FollowHelper extends Controller
      * @param User $user
      * @return bool
      */
-    public function unfollow(User $user): bool
+    public function unfollow(User $user)
     {
+        $authUser = User::find(Auth::user()->id);
+
         if ($this->isFollow($user)) {
-            $currentCustomer = User::find(Auth::user()->id);
-            $currentFollow = $currentCustomer->follows->where('user_id', $user->id);
+            $currentFollow = $authUser->follows->where('user_id', $user->id);
+
             return FollowerUser::destroy($currentFollow);
         }
 
@@ -43,16 +48,18 @@ class FollowHelper extends Controller
      * @param User $user
      * @return bool
      */
-    public function follow(User $user): bool
+    public function follow(User $user)
     {
-        $currentCustomer = User::find(Auth::user()->id);
+        $authUser = User::find(Auth::user()->id);
 
-        FollowerUser::create([
-            'user_id' => $user->id,
-            'follower_id' => $currentCustomer->id,
-        ]);
+        if (!$this->isFollow($user)) {
 
-        return true;
+            return FollowerUser::firstOrCreate([
+                'user_id' => $user->id,
+                'follower_id' => $authUser->id,
+            ]);
+        }
 
+        return false;
     }
 }

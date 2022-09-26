@@ -1,5 +1,5 @@
-<form method="POST" action="{{ route('followers.store') }}">
-@csrf
+<form method="POST" action="{{ route('followers.store', $user) }}">
+    @csrf
     <input name="user_id" type="hidden" value="{{ $user->id }}">
     <div class="max-w-2xl mx-auto absolute top-0 right-0" style="position: absolute; margin-top: 100px; margin-bottom: 100px; margin-right: 50px" >
         <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700" style="width: 300px">

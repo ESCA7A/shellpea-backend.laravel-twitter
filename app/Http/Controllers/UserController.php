@@ -45,7 +45,7 @@ class UserController extends Controller
             'user' => $user = User::find($id),
             'posts' => $posts = $user->posts,
             'followers' => $followers = FollowerUser::find($id),
-            'is_follow' => $followHelper->isFollow($user, $id),
+            'isFollow' => $followHelper->isFollow($user),
             ]);
     }
 
@@ -68,7 +68,6 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-
     }
 
     /**
