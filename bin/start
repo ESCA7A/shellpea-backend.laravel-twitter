@@ -6,5 +6,6 @@ if ($ENV > '')
   then echo 'NOT FOUND .ENV FILE'
 else
   php artisan key:generate
+  php artisan migrate --seed
   npm run dev & php artisan serve
 fi
