@@ -25,8 +25,9 @@ Route::prefix('/dashboard')->middleware(['auth'])->group(function () {
      * customer page
      */
     Route::resource('user', \App\Http\Controllers\UserController::class);
-    Route::resource('chats', \App\Http\Controllers\ChatController::class);
     Route::resource('followers', \App\Http\Controllers\FollowerController::class);
+    Route::resource('settings', \App\Http\Controllers\SettingsController::class);
+
 });
 
 /**
