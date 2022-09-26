@@ -6139,3 +6139,86 @@ Port 5173 is in use, trying another one...
   LARAVEL v9.31.0  plugin v0.6.0
 
   ➜  APP_URL: http://localhost
+5:05:38 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:05:38 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:05:38 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:05:50 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:05:50 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:05:50 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:06:07 PM [vite] .env changed, restarting server...
+5:06:07 PM [vite] .env changed, restarting server...
+5:06:07 PM [vite] server restarted.
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+Port 5173 is in use, trying another one...
+5:06:07 PM [vite] server restarted.
+
+  ➜  Local:   http://localhost:5174/
+  ➜  Network: use --host to expose
+
+  LARAVEL v9.31.0  plugin v0.6.0
+
+  ➜  APP_URL: http://localhost
+
+  LARAVEL v9.31.0  plugin v0.6.0
+
+  ➜  APP_URL: http://localhost
+5:07:08 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:07:08 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:08:06 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:08:06 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:08:57 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:08:57 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:09:37 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:09:37 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:10:23 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:10:23 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:10:40 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:10:40 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:10:46 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:10:46 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:11:39 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:11:39 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:11:48 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:11:48 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:12:06 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:12:06 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:08 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:08 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:13 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:13 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:27 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:27 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:37 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:37 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:40 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:13:40 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:14:16 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:14:16 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:14:39 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:14:39 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:14:48 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:14:48 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:15 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:15 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:35 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:35 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:40 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:40 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:48 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:48 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:58 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:15:58 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:16:12 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:16:12 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:16:21 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:16:21 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:16:39 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:16:39 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:17:12 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:17:12 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:17:20 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:17:20 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:20:34 PM [vite] page reload resources/views/templates/customer/chat.blade.php
+5:20:34 PM [vite] page reload resources/views/templates/customer/chat.blade.php
