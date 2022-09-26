@@ -6,19 +6,19 @@
 ####  how to deploy
 
 1. для начала склонируйте репозиторий
-2. у вас должен быть php ^7.4
-3. composer ^2
-4. 
-
 > git clone git@github.com:ESCA7A/twitter-laravel.git example
-
+2. проверьте необходимые зависимости
 ```
-    Здесь может быть
-    Ваша реклама
+    required dependencies:
+    1. php ^7.4
+    2. composer ^2
+    3. npm ^6
+    4. nodejs
 ```
-
-Это `слово` будет выделено
-
-```php
-    <?php phpinfo();?>
+3. добавьте подключение к базе данных в .env
 ```
+   DB_DATABASE=$database-name
+   DB_USERNAME=$user
+   DB_PASSWORD=0000
+```
+4. запустите в терминале команду `bin/start`

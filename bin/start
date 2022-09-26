@@ -5,5 +5,6 @@ ENV=$(find $pwd.. -name .env)
 if ($ENV > '')
   then echo 'NOT FOUND .ENV FILE'
 else
+  php artisan key:generate
   npm run dev & php artisan serve
 fi
