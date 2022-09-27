@@ -1,18 +1,57 @@
 #!/bin/bash
 
-ENV=$(find $pwd -name .env)
-GREEN='\033[1;32m'
-RED='\033[1;31m'
-NC='\033[0m' # No Color
+source ./bin/variables
 
-composer install && npm install
-
-if [ "$ENV" != "./.env" ]
+if [ ${ENV} != "./.env" ]
   then
-    printf "${GREEN}creating ENV configuration...${NC}" && sleep 1 && echo ... && sleep 1 && echo ...;
+    printf "${GREEN}
+        \t\t\t
+        +---------------------+
+        | Installing depends  |
+        +---------------------+
+        \t\t\t
+    "${NC}
+    sleep 3
+    composer install && npm install
+    printf "${GREEN}
+        \t\t\t
+        +------------------------------+
+        | creating ENV configuration   |
+        +------------------------------+
+        \t\t\t
+    "${NC}
     cp ./.env.example ./.env
-    printf "${GREEN}Confiration successfuly ${NC}\n${RED}Please enter your data in .env files by yourself${NC}" && sleep 1;
+    sleep 3;
+    printf "${GREEN}
+        \t\t\t
+        +--------------------------+
+        | Confiration successfuly  |
+        +--------------------------+
+        \t\t\t
+    "${NC}
+    printf "${RED}
+        \t\t\t
+        +---------------------------------------------------+
+        | Please enter your data in .env files by yourself  |
+        +---------------------------------------------------+
+        \t\t\t
+        "${NC}
+    sleep 3
+    printf "${GREEN}
+        \t\t\t
+        +----------------------+
+        | generate laravel key |
+        +----------------------+
+        \t\t\t
+        "${NC}
+    sleep 3
     php artisan key:generate
 else
-  printf "${RED}Please enter your data in .env files by yourself${NC}"
+    printf "${RED}
+        \t\t\t
+        +---------------------------------------------------+
+        | Please enter your data in .env files by yourself  |
+        +---------------------------------------------------+
+        \t\t\t
+        "${NC}
 fi
