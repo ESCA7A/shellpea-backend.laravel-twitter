@@ -77,3 +77,11 @@ CONFIGURATION_WARNING_MESSAGE="
     +---------------------------------------------------+
     \t\t\t
 "
+
+SUCCESSFULY_MESSAGE="
+    \t\t\t
+    +----------------------+
+    |     successfully     |
+    +----------------------+
+    \t\t\t
+"

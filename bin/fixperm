@@ -2,13 +2,9 @@
 
 source ./bin/variables
 
-printf "${GREEN}
-    \t\t\t
-    +----------------------------------------------------------------------------------------------+
-    | giving privileges all to bin directory for user and 'execute' privileges for group & other   |
-    +----------------------------------------------------------------------------------------------+
-    \t\t\t
-"${NC}
+printf "${GREEN} ${PERM_MESSAGE} ${NC}"
 
 chmod u+rwx -R $(pwd)/bin
 chmod go+xr -R $(pwd)/bin
+sleep 2
+printf "${GREEN} ${SUCCESSFULY_MESSAGE} ${NC}"
