@@ -3,4 +3,6 @@
 source ./bin/variables
 
 php artisan migrate --seed
-npm run dev & php artisan serve
+printf "${GREEN} ${SUCCESS_MIGRATE_MESSAGE} ${NC}"
+sleep 2
+npm run dev & sleep 1 && php artisan serve

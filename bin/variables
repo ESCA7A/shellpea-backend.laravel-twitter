@@ -1,11 +1,11 @@
 #!/bin/bash
 
-source .env.example
-
 ################################################
 # ENV CONFIGURATION FILE
 ################################################
 FIND_ENV=$(find $(pwd) -name .env)
+
+
 
 ################################################
 # COLORS
@@ -14,10 +14,9 @@ GREEN='\033[1;32m'
 RED='\033[1;31m'
 NC='\033[0m' # No Color
 
-
-
-#TEST
-
+################################################
+# MESSAGES
+################################################
 PERM_MESSAGE="
     \t\t\t
     +----------------------------------------------------------------------------------------------+
@@ -35,9 +34,9 @@ INSTALLING_DEPENDS_MESSAGE="
 
 CREATE_ENV_MESSAGE="
     \t\t\t
-    +------------------------------+
-    | creating ENV configuration   |
-    +------------------------------+
+    +----------------------------+
+    | creating ENV configuration |
+    +----------------------------+
     \t\t\t
 "
 
@@ -80,8 +79,30 @@ CONFIGURATION_WARNING_MESSAGE="
 
 SUCCESSFULY_MESSAGE="
     \t\t\t
-    +----------------------+
-    |     successfully     |
-    +----------------------+
+    +---------------+
+    | successfully  |
+    +---------------+
+    \t\t\t
+"
+
+SUCCESS_MIGRATE_MESSAGE="
+    \t\t\t
+    +---------------------------------------------------------+
+    | migrations completed successfully. Starting the server  |
+    +---------------------------------------------------------+
+    \t\t\t
+"
+
+HELP="
+    \t\t\t
+    +----------------------------------------------------------------+
+    |             Use the following CLI commands                     |
+    +----------------------------------------------------------------+
+    | bin/artisan                | run alias 'php artisan <commands>'|
+    | bin/fixperm                | fix bin directory permissions     |
+    | bin/install                | quick install depends & configure |
+    | bin/mysql                  | enter to database by short command|
+    | bin/start                  | start migrations & seed           |
+    +----------------------------------------------------------------+
     \t\t\t
 "

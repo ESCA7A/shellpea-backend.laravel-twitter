@@ -2,4 +2,4 @@
 
 source ./bin/variables
 
-make help
+printf "${GREEN} ${HELP} ${NC}"
