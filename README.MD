@@ -10,7 +10,7 @@
 ```
 # cloning repo
 #
-✘ esca7a@manjaro ~/ git clone git@github.com:ESCA7A/twitter-laravel.git example
+✘ [esca7a@manjaro] ~/:$ git clone git@github.com:ESCA7A/twitter-laravel.git example
 #Cloning into 'example'...
 ```
 2. go to directory 
@@ -18,13 +18,13 @@
 #Receiving objects: 100% (2834/2834), 17.84 MiB | 5.71 MiB/s, done.
 #Resolving deltas: 100% (711/711), done.
 #
- esca7a@manjaro ~/ cd example
+ [esca7a@manjaro] ~/example:$ cd example
 ```
 - [x] the project includes support for a small number of short commands for convenience
 3. run `bin/help` in terminal
 
 ```
- ✘ esca7a@manjaro ~/example   refactoring  bin/help
+ ✘ [esca7a@manjaro] ~/example 🌴refactoring :$ bin/help
  #   
  #  +----------------------------------------------------------------+
  #  |             Use the following CLI commands                     |
@@ -49,7 +49,7 @@
 
 5. run `bin/install`
 ```
-✘ esca7a@manjaro ~/example   refactoring   bin/install   
+✘ [esca7a@manjaro] ~/example 🌴refactoring :$ bin/install   
 #
 #   +---------------------+
 #   | Installing depends  |
@@ -75,7 +75,7 @@
 7. run `bin/start` in terminal
 
 ```
- ✘ esca7a@manjaro ~/example   refactoring   bin/start
+ ✘ [esca7a@manjaro] ~/example 🌴refactoring :$ bin/start
  #   INFO  Nothing to migrate.
  #
  #   INFO  Seeding database.
