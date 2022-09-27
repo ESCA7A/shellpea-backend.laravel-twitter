@@ -1,10 +1,11 @@
-# 'Twitters' - project for learn
+# **Twitters**
 
 ### description
-...
+project as part of learning the laravel framework
+
 
 [@author](https://github.com/ESCA7A)
-####  how to deploy
+### how to deploy
 
 1. clone the repository first
 ```
@@ -18,9 +19,9 @@
 #Receiving objects: 100% (2834/2834), 17.84 MiB | 5.71 MiB/s, done.
 #Resolving deltas: 100% (711/711), done.
 #
- [esca7a@manjaro] ~/example:$ cd example
+ [esca7a@manjaro] ~/:$ cd example
 ```
-- [x] the project includes support for a small number of short commands for convenience
+- [x] **the project includes support for a small number of short commands for convenience**
 3. run `bin/help` in terminal
 
 ```
@@ -67,9 +68,9 @@
 6. go to .env and add database configuration 
 
 ```
-   DB_DATABASE=laravel_engine
-   DB_USERNAME=twitter
-   DB_PASSWORD=twitter
+    DB_DATABASE=laravel_engine
+    DB_USERNAME=twitter
+    DB_PASSWORD=twitter
 ```
 
 7. run `bin/start` in terminal
