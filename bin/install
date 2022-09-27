@@ -2,56 +2,21 @@
 
 source ./bin/variables
 
-if [ ${ENV} != "./.env" ]
+if [ "${FIND_ENV}" != $(pwd)/.env ]
   then
-    printf "${GREEN}
-        \t\t\t
-        +---------------------+
-        | Installing depends  |
-        +---------------------+
-        \t\t\t
-    "${NC}
+    printf "${GREEN} ${INSTALLING_DEPENDS_MESSAGE} ${NC}"
     sleep 3
     composer install && npm install
-    printf "${GREEN}
-        \t\t\t
-        +------------------------------+
-        | creating ENV configuration   |
-        +------------------------------+
-        \t\t\t
-    "${NC}
+    printf "${GREEN} ${CREATE_ENV_MESSAGE} ${NC}"
     cp ./.env.example ./.env
     sleep 3;
-    printf "${GREEN}
-        \t\t\t
-        +--------------------------+
-        | Confiration successfuly  |
-        +--------------------------+
-        \t\t\t
-    "${NC}
-    printf "${RED}
-        \t\t\t
-        +---------------------------------------------------+
-        | Please enter your data in .env files by yourself  |
-        +---------------------------------------------------+
-        \t\t\t
-        "${NC}
+    printf "${GREEN} ${CONF_SUCCESS_MESSAGE} ${NC}"
+    sleep 3;
+    printf "${RED} ${CONF_INFO_MESSAGE} ${NC}"
     sleep 3
-    printf "${GREEN}
-        \t\t\t
-        +----------------------+
-        | generate laravel key |
-        +----------------------+
-        \t\t\t
-        "${NC}
+    printf "${GREEN} ${GEN_KEY_MESSAGE} ${NC}"
     sleep 3
     php artisan key:generate
 else
-    printf "${RED}
-        \t\t\t
-        +---------------------------------------------------+
-        | Please enter your data in .env files by yourself  |
-        +---------------------------------------------------+
-        \t\t\t
-        "${NC}
+    printf "${RED} ${CONFIGURATION_WARNING_MESSAGE} ${NC}"
 fi

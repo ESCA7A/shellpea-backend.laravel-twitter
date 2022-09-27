@@ -1,5 +1,12 @@
 #!/bin/bash
 
+source .env.example
+
+################################################
+# ENV CONFIGURATION FILE
+################################################
+FIND_ENV=$(find $(pwd) -name .env)
+
 ################################################
 # COLORS
 ################################################
@@ -8,7 +15,65 @@ RED='\033[1;31m'
 NC='\033[0m' # No Color
 
 
-################################################
-# ENV CONFIGURATION FILE
-################################################
-ENV=$(find $pwd -name .env)
+
+#TEST
+
+PERM_MESSAGE="
+    \t\t\t
+    +----------------------------------------------------------------------------------------------+
+    | giving privileges all to bin directory for user and 'execute' privileges for group & other   |
+    +----------------------------------------------------------------------------------------------+
+    \t\t\t
+"
+INSTALLING_DEPENDS_MESSAGE="
+    \t\t\t
+    +---------------------+
+    | Installing depends  |
+    +---------------------+
+    \t\t\t
+"
+
+CREATE_ENV_MESSAGE="
+    \t\t\t
+    +------------------------------+
+    | creating ENV configuration   |
+    +------------------------------+
+    \t\t\t
+"
+
+CONF_SUCCESS_MESSAGE="
+    \t\t\t
+    +--------------------------+
+    | Confiration successfuly  |
+    +--------------------------+
+    \t\t\t
+"
+
+CONF_INFO_MESSAGE="
+    \t\t\t
+    +---------------------------------------------------+
+    | Please enter your data in .env files by yourself  |
+    +---------------------------------------------------+
+    |            your data by default:                  |
+    |            database: twitter                      |
+    |            username: twitter                      |
+    |            password: twitter                      |
+    +---------------------------------------------------+
+    \t\t\t
+"
+
+GEN_KEY_MESSAGE="
+    \t\t\t
+    +----------------------+
+    | generate laravel key |
+    +----------------------+
+    \t\t\t
+"
+
+CONFIGURATION_WARNING_MESSAGE="
+    \t\t\t
+    +---------------------------------------------------+
+    | Please enter your data in .ENV file by yourself   |
+    +---------------------------------------------------+
+    \t\t\t
+"
